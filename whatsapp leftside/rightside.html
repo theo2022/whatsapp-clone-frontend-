@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .leftside {
+      width: 50%;
+      height: 500px;
+    }
+    #name {
+      width: 100%;
+      background-color: green;
+      padding: 20px;
+      font-size: 2.5rem;
+      color: white;
+      display: none;
+    }
+    #demo {
+      color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+    }
+    #input {
+      display: none;
+      width: 70%;
+      border-radius: 10px;
+      border: 1px solid lightgrey;
+      padding: 12px;
+      font-size: 1.1rem;
+    }
+    #sendbutton {
+      padding: 15px;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      background-color: green;
+      display: none;
+    }
+    #display {
+      overflow-y: auto;
+    }
+    .rightcorner {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      position: fixed;
+    }
+  </style>
+  <body>
+    <div class="leftside">
+      <button id="first" onclick="myclick1()">arun</button>
+      <button onclick="myclick2()">arul</button>
+      <button onclick="myclick3()">ashok</button>
+      <button onclick="myclick4()">vinoth</button>
+      <button onclick="myclick5()">ram</button>
+      <button onclick="myclick6()">prem</button>
+      <button onclick="myclick7()">harish</button>
+      <button onclick="myclick8()">giri</button>
+      <button onclick="myclick9()">kishore</button>
+      <button onclick="myclick10()">praveen</button>
+      <button onclick="myclick11()">abdul</button>
+      <button onclick="myclick12()">akash</button>
+      <button onclick="myclick13()">karthik</button>
+      
+      <div id="name"></div>
+      <div id="demo"></div>
+
+      <p id="display"></p>
+
+      <div class="rightcorner">
+        <form id="form" action="/action_page.php">
+          <input type="text" value="" id="input" autocomplete="off" />
+        </form>
+        <button onclick="myFunction1()" id="sendbutton">send</button>
+      </div>
+    </div>
+    <script>
+      function myclick1() {
+        var inputelement = document.getElementById("input");
+        inputelement.style.display = "block";
+        var inputelement1 = document.getElementById("sendbutton");
+        inputelement1.style.display = "block";
+
+        var element = document.createElement("div");
+      
+        var node = document.createTextNode("arun");
+        element.appendChild(node);
+       document.getElementById("name").innerHTML="";
+        var parent = document.getElementById("name");
+        parent.appendChild(element);
+        parent.style.display = "block";
+         
+      
+        var txt = "";
+        var arun = ["hi", "hello", "epidi da iruka"];
+        arun.forEach(myfunction);
+
+        document.getElementById("demo").innerHTML = txt;
+        function myfunction(value) {
+          txt += value + "<br>" + "<br>";
+        }
+    
+      }
+      function myFunction1() {
+        var x = document.forms["form"];
+        var text = "";
+        var i;
+        for (i = 0; i < x.length; i++) {
+          text += x.elements[i].value + "<br>" + "<br>";
+        }
+        document.getElementById("display").innerHTML += text;
+      }
+    
+    </script>
+    <script src="arul.js"></script>
+    <script src="ashok.js"></script>
+    <script src="vinoth.js"></script>
+    <script src="ram.js"></script>
+    <script src="prem.js"></script>
+    <script src="harish.js"></script>
+    <script src="giri.js"></script>
+    <script src="kishore.js"></script>
+    <script src="praveen.js"></script>
+    <script src="abdul.js"></script>
+    <script src="akash.js"></script>
+    <script src="karthik.js"></script>
+
+  </body>
+</html>
